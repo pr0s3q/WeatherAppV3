@@ -31,10 +31,11 @@ namespace WeatherAppV3
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Thread.Sleep(1000);
                     Console.WriteLine();
-                    Console.WriteLine("Continye - Y/y: ");
+                    Console.WriteLine("Continue - Y/y: ");
                     char key = Convert.ToChar(Console.ReadLine());
                     if (key == 'y' || key == 'Y')
                     {
+                        Console.Clear();
                         continue;
                     }
                     else { break; }
@@ -69,7 +70,7 @@ namespace WeatherAppV3
                 }
                 return responseFromServer;
             }
-            catch (WebException e)
+            catch (WebException)
             {
                 return null;
             }
