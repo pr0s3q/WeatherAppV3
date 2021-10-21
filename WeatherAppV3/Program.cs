@@ -32,7 +32,7 @@ namespace WeatherAppV3
                     Thread.Sleep(1000);
                     Console.WriteLine();
                     Console.WriteLine("Continye - Y/y: ");
-                    char key = Convert.ToChar(Console.ReadKey());
+                    char key = Convert.ToChar(Console.ReadLine());
                     if (key == 'y' || key == 'Y')
                     {
                         continue;
@@ -77,7 +77,7 @@ namespace WeatherAppV3
         static CityWeather CreateCityWeatherObject(string weatherInfo)
         {
             WeatherAPI.CityWeatherFromAPI cityWeatherData = JsonConvert.DeserializeObject<WeatherAPI.CityWeatherFromAPI>(weatherInfo);
-            double tempC = Math.Round(cityWeatherData.main.Temp, 2);
+            double tempC = Math.Round(cityWeatherData.main.Temp - 273.15, 2);
             double tempF = Math.Round(((tempC * 1.8) + 32), 2);
             CityWeather city = new CityWeather(cityWeatherData.Name, cityWeatherData.weather[0].Main, cityWeatherData.weather[0].Description, tempC, tempF, cityWeatherData.main.Pressure, cityWeatherData.main.Humidity, cityWeatherData.wind.Speed, cityWeatherData.clouds.All);
             return city;
