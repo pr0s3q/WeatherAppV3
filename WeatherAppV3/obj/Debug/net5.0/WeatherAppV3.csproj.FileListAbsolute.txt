@@ -1,0 +1,16 @@
+D:\C#Projects\WeatherAppV3\WeatherAppV3\bin\Debug\net5.0\WeatherAppV3.exe
+D:\C#Projects\WeatherAppV3\WeatherAppV3\bin\Debug\net5.0\WeatherAppV3.deps.json
+D:\C#Projects\WeatherAppV3\WeatherAppV3\bin\Debug\net5.0\WeatherAppV3.runtimeconfig.json
+D:\C#Projects\WeatherAppV3\WeatherAppV3\bin\Debug\net5.0\WeatherAppV3.runtimeconfig.dev.json
+D:\C#Projects\WeatherAppV3\WeatherAppV3\bin\Debug\net5.0\WeatherAppV3.dll
+D:\C#Projects\WeatherAppV3\WeatherAppV3\bin\Debug\net5.0\ref\WeatherAppV3.dll
+D:\C#Projects\WeatherAppV3\WeatherAppV3\bin\Debug\net5.0\WeatherAppV3.pdb
+D:\C#Projects\WeatherAppV3\WeatherAppV3\obj\Debug\net5.0\WeatherAppV3.csproj.AssemblyReference.cache
+D:\C#Projects\WeatherAppV3\WeatherAppV3\obj\Debug\net5.0\WeatherAppV3.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#Projects\WeatherAppV3\WeatherAppV3\obj\Debug\net5.0\WeatherAppV3.AssemblyInfoInputs.cache
+D:\C#Projects\WeatherAppV3\WeatherAppV3\obj\Debug\net5.0\WeatherAppV3.AssemblyInfo.cs
+D:\C#Projects\WeatherAppV3\WeatherAppV3\obj\Debug\net5.0\WeatherAppV3.csproj.CoreCompileInputs.cache
+D:\C#Projects\WeatherAppV3\WeatherAppV3\obj\Debug\net5.0\WeatherAppV3.dll
+D:\C#Projects\WeatherAppV3\WeatherAppV3\obj\Debug\net5.0\ref\WeatherAppV3.dll
+D:\C#Projects\WeatherAppV3\WeatherAppV3\obj\Debug\net5.0\WeatherAppV3.pdb
+D:\C#Projects\WeatherAppV3\WeatherAppV3\obj\Debug\net5.0\WeatherAppV3.genruntimeconfig.cache
