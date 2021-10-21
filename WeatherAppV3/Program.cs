@@ -17,7 +17,28 @@ namespace WeatherAppV3
             {
                 Console.WriteLine("Type the city name: ");
                 cityName = Console.ReadLine();
+                Console.WriteLine();
                 CityWeather city = GetCityWeatherInfo(cityName);
+                if(city == null)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Wrong city name!");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                }
+                else
+                {
+                    city.ShowCityWeatherInfo();
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Thread.Sleep(1000);
+                    Console.WriteLine();
+                    Console.WriteLine("Continye - Y/y: ");
+                    char key = Convert.ToChar(Console.ReadKey());
+                    if (key == 'y' || key == 'Y')
+                    {
+                        continue;
+                    }
+                    else { break; }
+                }
             }
         }
         static CityWeather GetCityWeatherInfo(string cityName)
@@ -58,7 +79,7 @@ namespace WeatherAppV3
             WeatherAPI.CityWeatherFromAPI cityWeatherData = JsonConvert.DeserializeObject<WeatherAPI.CityWeatherFromAPI>(weatherInfo);
             double tempC = Math.Round(cityWeatherData.main.Temp, 2);
             double tempF = Math.Round(((tempC * 1.8) + 32), 2);
-            CityWeather city = new CityWeather(cityWeatherData.Name, cityWeatherData.weather[0].Main, cityWeatherData.weather[0].Description, tempC, tempF, cityWeatherData.main.Preasure, cityWeatherData.main.Humidity, cityWeatherData.wind.Speed, cityWeatherData.clouds.All);
+            CityWeather city = new CityWeather(cityWeatherData.Name, cityWeatherData.weather[0].Main, cityWeatherData.weather[0].Description, tempC, tempF, cityWeatherData.main.Pressure, cityWeatherData.main.Humidity, cityWeatherData.wind.Speed, cityWeatherData.clouds.All);
             return city;
         }
     }

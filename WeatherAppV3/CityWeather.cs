@@ -27,7 +27,42 @@ namespace WeatherAppV3
         }
         public void ShowCityWeatherInfo()
         {
-            Console.WriteLine("City: " + Name + ", Weather Type: " + WeatherType + ", Weather Description: " + WeatherDescription + ", Temperature in C: " + TempC + ", Temperature in F: " + TempF + ", Pressure: " + Pressure + "hPa, Humidity: " + Humidity + "%, Wind Speed: " + WindSpeed + "meters/sec, Cloudiness: " + Cloudiness + "%");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("City: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(Name);
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("Weather type: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(WeatherType);
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("Weather Description: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(WeatherDescription);
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("Temperature in C: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(TempC);
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("Temperature in F: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(TempF);
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("Pressure: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(Pressure + "hPa");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("Humidity: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(Humidity + "%");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("Wind Speed: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(WindSpeed + " meters/sec");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("Cloudiness: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(Cloudiness + "%");
         }
     }
 }
