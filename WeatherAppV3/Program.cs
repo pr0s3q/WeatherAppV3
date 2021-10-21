@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.IO;
 using System.Net;
 using System.Threading;
@@ -54,7 +55,11 @@ namespace WeatherAppV3
         }
         static CityWeather CreateCityWeatherObject(string weatherInfo)
         {
-
+            WeatherAPI.CityWeatherFromAPI cityWeatherData = JsonConvert.DeserializeObject<WeatherAPI.CityWeatherFromAPI>(weatherInfo);
+            double tempC = Math.Round(cityWeatherData.main.Temp, 2);
+            double tempF = Math.Round(((tempC * 1.8) + 32), 2);
+            CityWeather city = new CityWeather(cityWeatherData.Name, cityWeatherData.weather[0].Main, cityWeatherData.weather[0].Description, tempC, tempF, cityWeatherData.main.Preasure, cityWeatherData.main.Humidity, cityWeatherData.wind.Speed, cityWeatherData.clouds.All);
+            return city;
         }
     }
 }
